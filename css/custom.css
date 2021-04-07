@@ -44,7 +44,10 @@ p {
 /*----------------- NAVIGATION -------------------------- */
 .nav-area {
   display: flex;
-  background: #eaeff6; }
+  background: #eaeff6;
+  flex-wrap: wrap; }
+  .nav-area .mobile-menu-area {
+    display: none; }
   .nav-area .logo {
     width: 140px;
     margin-top: 3vh;

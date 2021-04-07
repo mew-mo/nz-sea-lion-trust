@@ -83,6 +83,11 @@ p {
 .nav-area {
   display: flex;
   background: #eaeff6;
+  flex-wrap: wrap;
+
+  .mobile-menu-area {
+    display: none;
+  }
 
   .logo {
     width: 140px;
