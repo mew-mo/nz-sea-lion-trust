@@ -1,0 +1,193 @@
+// custom scsss
+
+// importing variables
+
+@import 'vars';
+
+
+// ----------------- MIXINS -----------------
+
+@mixin border-radius($radius: 73px){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+// we can use @include border-radius; and use () to pass in an arguement if needed
+
+// we can use @extend [.class] to include all the attributes of a class
+// main diff is extend uses a CLASS! rather than calling a mixin
+
+/*----------------- UNIVERSAL ELEMENTS ----------------- */
+
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: $off-white;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+
+// header set (h1 to h6 and p)---------------
+
+h1, h2, h3, h4, h5, h6, p {
+}
+
+h1 {
+  color: $navy;
+  font-size: 7.53rem;
+  font-weight: 400;
+  font-family: 'Mina', sans-serif;
+}
+
+h2 {
+  font-size: 5.378rem;
+  font-family: 'Mina', sans-serif;
+}
+
+h3 {
+  font-size: 3.842rem;
+  font-family: 'Mina', sans-serif;
+}
+
+h4 {
+  font-size: 2.744rem;
+  font-family: 'Mina', sans-serif;
+}
+
+h5 {
+  color: $blue;
+  font-size: 1.96rem;
+  font-weight: 400;
+  font-family: 'Mina', sans-serif;
+}
+
+h6 {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*----------------- NAVIGATION -------------------------- */
+
+.nav-area {
+  display: flex;
+  background: #eaeff6;
+
+  .logo {
+    width: 140px;
+    margin-top: 3vh;
+    padding-left: 60px;
+  }
+
+  .dropdown,
+  .nav-item {
+    margin-top: 5vh;
+  }
+
+  .nav-item,
+  .nav-subitem {
+    color: $blue;
+    font-size: 1.4rem;
+    font-family: 'Mina', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 0 10px;
+  }
+
+  .nav-item:hover,
+  .nav-subitem:hover {
+    color: $aqua;
+    // padding-bottom: 5px;
+    border-bottom: 2px solid $aqua;
+  }
+
+  .drop-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+
+    .nav-subitem {
+      display: block;
+      text-align: left;
+    }
+  }
+  // dropdown-content ENDS
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .donate-btn {
+    height: 55px;
+    color: $aqua;
+    background: none;
+    border: 2px solid $aqua;
+    cursor: pointer;
+    padding: 5px 30px 0 30px;
+    margin: 4.7vh 0 0 30px;
+    @extend .nav-item;
+    @include border-radius;
+  }
+
+  .donate-btn:hover {
+    color: $off-white;
+    background: $aqua;
+  }
+
+}
+// nav area ENDS
+
+// -------------- MAIN CONTAINER -----------------------------
+
+.container {
+  display: flex;
+  height: 90vh;
+  flex-direction: row;
+}
+
+// -------------- HERO IMG AREA------------------------------
+
+.hero-img-area {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #99c9e8;
+}
+
+// --------------- MAIN INTRO AREA -----------------------------
+
+.main-intro-area {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #cae5f6;
+
+  .learn-btn {
+    position: absolute;
+  }
+
+}
+
+
+// ----------------- FOOTER ------------------------------------
+
+.footer {
+ height: 10vh;
+ background-color: #000;
+}

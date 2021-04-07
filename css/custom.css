@@ -1,0 +1,118 @@
+/*----------------- UNIVERSAL ELEMENTS ----------------- */
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  background-color: #FCF9F7;
+  height: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+h1 {
+  color: #16425B;
+  font-size: 7.53rem;
+  font-weight: 400;
+  font-family: 'Mina', sans-serif; }
+
+h2 {
+  font-size: 5.378rem;
+  font-family: 'Mina', sans-serif; }
+
+h3 {
+  font-size: 3.842rem;
+  font-family: 'Mina', sans-serif; }
+
+h4 {
+  font-size: 2.744rem;
+  font-family: 'Mina', sans-serif; }
+
+h5 {
+  color: #85A5D6;
+  font-size: 1.96rem;
+  font-weight: 400;
+  font-family: 'Mina', sans-serif; }
+
+h6 {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif; }
+
+p {
+  font-family: 'Roboto', sans-serif; }
+
+/*----------------- NAVIGATION -------------------------- */
+.nav-area {
+  display: flex;
+  background: #eaeff6; }
+  .nav-area .logo {
+    width: 140px;
+    margin-top: 3vh;
+    padding-left: 60px; }
+  .nav-area .dropdown,
+  .nav-area .nav-item,
+  .nav-area .donate-btn {
+    margin-top: 5vh; }
+  .nav-area .nav-item, .nav-area .donate-btn,
+  .nav-area .nav-subitem {
+    color: #85A5D6;
+    font-size: 1.4rem;
+    font-family: 'Mina', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 0 10px; }
+  .nav-area .nav-item:hover, .nav-area .donate-btn:hover,
+  .nav-area .nav-subitem:hover {
+    color: #66C8CA;
+    border-bottom: 2px solid #66C8CA; }
+  .nav-area .drop-btn {
+    background: none;
+    border: none;
+    padding: 10px; }
+  .nav-area .dropdown-content {
+    display: none;
+    position: absolute; }
+    .nav-area .dropdown-content .nav-subitem {
+      display: block;
+      text-align: left; }
+  .nav-area .dropdown:hover .dropdown-content {
+    display: block; }
+  .nav-area .donate-btn {
+    height: 55px;
+    color: #66C8CA;
+    background: none;
+    border: 2px solid #66C8CA;
+    cursor: pointer;
+    padding: 5px 30px 0 30px;
+    margin: 4.7vh 0 0 30px;
+    -webkit-border-radius: 73px;
+    -moz-border-radius: 73px;
+    border-radius: 73px; }
+  .nav-area .donate-btn:hover {
+    color: #FCF9F7;
+    background: #66C8CA; }
+
+.container {
+  display: flex;
+  height: 90vh;
+  flex-direction: row; }
+
+.hero-img-area {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #99c9e8; }
+
+.main-intro-area {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #cae5f6; }
+  .main-intro-area .learn-btn {
+    position: absolute; }
+
+.footer {
+  height: 10vh;
+  background-color: #000; }
+
+/*# sourceMappingURL=custom.css.map */
