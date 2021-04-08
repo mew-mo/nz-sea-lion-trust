@@ -14,7 +14,8 @@ h1 {
   color: #16425B;
   font-size: 7.53rem;
   font-weight: 400;
-  font-family: 'Mina', sans-serif; }
+  font-family: 'Mina', sans-serif;
+  line-height: 120px; }
 
 h2 {
   font-size: 5.378rem;
@@ -44,7 +45,6 @@ p {
 /*----------------- NAVIGATION -------------------------- */
 .nav-area {
   display: flex;
-  background: #eaeff6;
   flex-wrap: wrap; }
   .nav-area .mobile-menu-area {
     display: none; }
@@ -58,64 +58,174 @@ p {
     margin-top: 5vh; }
   .nav-area .nav-item, .nav-area .donate-btn,
   .nav-area .nav-subitem {
+    position: relative;
+    left: 45vw;
     color: #85A5D6;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 10px 0 10px; }
+    padding: 10px 10px 0 10px;
+    transition: 0.5s;
+    transition-timing-function: ease; }
   .nav-area .nav-item:hover, .nav-area .donate-btn:hover,
   .nav-area .nav-subitem:hover {
     color: #66C8CA;
-    border-bottom: 2px solid #66C8CA; }
+    border-bottom: 2px solid #66C8CA;
+    transition: 0.5s;
+    transition-timing-function: ease; }
   .nav-area .drop-btn {
     background: none;
     border: none;
     padding: 10px; }
   .nav-area .dropdown-content {
     display: none;
-    position: absolute; }
+    position: absolute;
+    background-color: #F6F1EF; }
     .nav-area .dropdown-content .nav-subitem {
       display: block;
       text-align: left; }
   .nav-area .dropdown:hover .dropdown-content {
     display: block; }
   .nav-area .donate-btn {
-    height: 55px;
+    margin: 4.7vh 0 0 30px;
     color: #66C8CA;
-    background: none;
+    height: 55px;
+    font-size: 1.4rem;
+    font-family: 'Mina', sans-serif;
+    text-transform: uppercase;
+    padding: 5px 30px 0 30px;
+    background: #FCF9F7;
     border: 2px solid #66C8CA;
     cursor: pointer;
-    padding: 5px 30px 0 30px;
-    margin: 4.7vh 0 0 30px;
+    transition: 0.5s;
+    transition-timing-function: ease;
     -webkit-border-radius: 73px;
     -moz-border-radius: 73px;
     border-radius: 73px; }
   .nav-area .donate-btn:hover {
     color: #FCF9F7;
-    background: #66C8CA; }
+    background: #66C8CA;
+    transition: 0.5s;
+    transition-timing-function: ease; }
 
 .container {
   display: flex;
-  height: 90vh;
+  height: 75vh;
   flex-direction: row; }
 
 .hero-img-area {
   display: flex;
   height: 100%;
-  width: 50%;
-  background-color: #99c9e8; }
+  width: 50%; }
+  .hero-img-area .sealion-hero-img {
+    width: 80%;
+    padding: 50px 0 0 150px; }
 
 .main-intro-area {
-  display: flex;
   height: 100%;
-  width: 50%;
-  background-color: #cae5f6; }
+  width: 50%; }
+  .main-intro-area .main-header {
+    padding: 100px 150px 0 0; }
+  .main-intro-area .main-subheader {
+    padding: 10px 300px 0 0; }
   .main-intro-area .learn-btn {
-    position: absolute; }
+    margin: 30px 0 0 -5px;
+    color: #FCF9F7;
+    height: 55px;
+    font-size: 1.4rem;
+    font-family: 'Mina', sans-serif;
+    text-transform: uppercase;
+    padding: 5px 30px 0 30px;
+    background: #66C8CA;
+    border: 2px solid #FCF9F7;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-timing-function: ease;
+    -webkit-border-radius: 73px;
+    -moz-border-radius: 73px;
+    border-radius: 73px; }
+    .main-intro-area .learn-btn .more-arrow {
+      padding-left: 10px; }
+  .main-intro-area .learn-btn:hover {
+    background: #389799;
+    transition: 0.5s;
+    transition-timing-function: ease; }
 
 .footer {
+  display: flex;
+  color: #373D3F;
   height: 10vh;
-  background-color: #000; }
+  width: 100%; }
+  .footer .social-media-area {
+    color: #85A5D6;
+    font-size: 40px;
+    padding: 0 0 0 60px; }
+    .footer .social-media-area .social-icon {
+      position: relative;
+      top: 30px;
+      padding: 0 0 0 30px;
+      cursor: pointer;
+      transition: 0.5s;
+      transition-timing-function: ease; }
+    .footer .social-media-area .social-icon:hover {
+      color: #66C8CA;
+      transition: 0.5s;
+      transition-timing-function: ease; }
+  .footer .email-area {
+    position: relative;
+    left: 65vw;
+    top: 35px; }
+  .footer .po-box-area {
+    position: relative;
+    left: 78vw;
+    top: -40px; }
+
+@media only screen and (max-width: 600px) {
+  .nav-item, .nav-area .donate-btn,
+  .nav-subitem,
+  .dropdown,
+  .drop-btn {
+    display: none; }
+
+  .mobile-menu-area {
+    display: block; }
+
+  .container {
+    display: block; }
+
+  .hero-img-area {
+    height: 70%;
+    width: 80%;
+    justify-content: center;
+    align-items: center; }
+    .hero-img-area .sealion-hero-img {
+      width: 100%;
+      padding: 0 0 0 100px; }
+
+  .main-intro-area {
+    width: 100%;
+    text-align: center; }
+    .main-intro-area .main-header {
+      padding: 0 10px 0 10px; }
+    .main-intro-area .main-subheader {
+      padding: 10px 20px 0 20px; }
+
+  .footer {
+    display: block; }
+    .footer .social-media-area {
+      padding: 0; }
+      .footer .social-media-area .social-icon {
+        top: 36vh;
+        left: 10vw;
+        padding: 0 20px 0 0; }
+    .footer .email-area {
+      text-align: left;
+      left: 10vw;
+      top: 38vh; }
+    .footer .po-box-area {
+      text-align: left;
+      left: 60vw;
+      top: 30.5vh; } }
 
 /*# sourceMappingURL=custom.css.map */

@@ -5,14 +5,31 @@
 @import 'vars';
 
 
-// ----------------- MIXINS -----------------
+// ----------------- MIXINS AND EXTENDS -----------------
 
-@mixin border-radius($radius: 73px){
+@mixin border-radius($radius: 73px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
-// we can use @include border-radius; and use () to pass in an arguement if needed
+
+@mixin transition($time: 0.5s) {
+  transition: $time;
+  transition-timing-function: ease;
+}
+
+@mixin button($color: $aqua, $bg-color: $off-white) {
+  color: $color;
+  height: 55px;
+  font-size: 1.4rem;
+  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  padding: 5px 30px 0 30px;
+  background: $bg-color;
+  border: 2px solid $color;
+  cursor: pointer;
+  @include transition;
+}
 
 // we can use @extend [.class] to include all the attributes of a class
 // main diff is extend uses a CLASS! rather than calling a mixin
@@ -30,21 +47,17 @@ body {
   background-color: $off-white;
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  // overflow-x: hidden;
-  // overflow-y: hidden;
 }
 
 
 // header set (h1 to h6 and p)---------------
-
-h1, h2, h3, h4, h5, h6, p {
-}
 
 h1 {
   color: $navy;
   font-size: 7.53rem;
   font-weight: 400;
   font-family: 'Mina', sans-serif;
+  line-height: 120px;
 }
 
 h2 {
@@ -82,7 +95,6 @@ p {
 
 .nav-area {
   display: flex;
-  background: #eaeff6;
   flex-wrap: wrap;
 
   .mobile-menu-area {
@@ -102,19 +114,22 @@ p {
 
   .nav-item,
   .nav-subitem {
+    position: relative;
+    left: 45vw;
     color: $blue;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 10px 0 10px;
+    @include transition;
   }
 
   .nav-item:hover,
   .nav-subitem:hover {
     color: $aqua;
-    // padding-bottom: 5px;
     border-bottom: 2px solid $aqua;
+    @include transition;
   }
 
   .drop-btn {
@@ -126,6 +141,7 @@ p {
   .dropdown-content {
     display: none;
     position: absolute;
+    background-color: $dark-off-white;
 
     .nav-subitem {
       display: block;
@@ -139,20 +155,16 @@ p {
   }
 
   .donate-btn {
-    height: 55px;
-    color: $aqua;
-    background: none;
-    border: 2px solid $aqua;
-    cursor: pointer;
-    padding: 5px 30px 0 30px;
     margin: 4.7vh 0 0 30px;
     @extend .nav-item;
+    @include button;
     @include border-radius;
   }
 
   .donate-btn:hover {
     color: $off-white;
     background: $aqua;
+    @include transition;
   }
 
 }
@@ -162,7 +174,7 @@ p {
 
 .container {
   display: flex;
-  height: 90vh;
+  height: 75vh;
   flex-direction: row;
 }
 
@@ -172,27 +184,92 @@ p {
   display: flex;
   height: 100%;
   width: 50%;
-  background-color: #99c9e8;
+
+  .sealion-hero-img {
+    width: 80%;
+    padding: 50px 0 0 150px;
+  }
 }
 
 // --------------- MAIN INTRO AREA -----------------------------
 
 .main-intro-area {
-  display: flex;
   height: 100%;
   width: 50%;
-  background-color: #cae5f6;
+
+  .main-header {
+    padding: 100px 150px 0 0;
+  }
+
+  .main-subheader {
+    padding: 10px 300px 0 0;
+  }
 
   .learn-btn {
-    position: absolute;
+    margin: 30px 0 0 -5px;
+    @include button($off-white, $aqua);
+    @include border-radius;
+
+    .more-arrow {
+      padding-left: 10px;
+    }
+
+  }
+  // learn button ENDS
+
+  .learn-btn:hover {
+    background: $dark-aqua;
+    @include transition;
   }
 
 }
+// main intro area ENDS
 
 
 // ----------------- FOOTER ------------------------------------
 
 .footer {
- height: 10vh;
- background-color: #000;
+  display: flex;
+  color: $off-black;
+  height: 10vh;
+  width: 100%;
+
+  .social-media-area {
+    color: $blue;
+    font-size: 40px;
+    padding: 0 0 0 60px;
+
+    .social-icon {
+      position: relative;
+      top: 30px;
+      padding: 0 0 0 30px;
+      cursor: pointer;
+      @include transition;
+    }
+
+    .social-icon:hover {
+      color: $aqua;
+      @include transition;
+    }
+
+  }
+  // social media area ENDS
+
+  .email-area {
+    position: relative;
+    left: 65vw;
+    top: 35px;
+  }
+
+  .po-box-area {
+    position: relative;
+    left: 78vw;
+    top: -40px;
+  }
+
 }
+// footer ENDS
+
+// -------------------- ALL MEDIA QUERIES ---------------------
+
+@import 'media-queries';

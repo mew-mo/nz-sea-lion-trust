@@ -1,0 +1,84 @@
+// extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+
+
+  // NAVIGATION ----------------------------------
+
+  .nav-item,
+  .nav-subitem,
+  .dropdown,
+  .drop-btn {
+    display: none;
+  }
+
+  .mobile-menu-area {
+    display: block;
+  }
+
+  // MAIN CONTAINER------------------------------
+
+  .container {
+    display: block;
+  }
+
+  // HERO IMG AREA-------------------------------
+
+  .hero-img-area {
+    height: 70%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+
+    .sealion-hero-img {
+      width: 100%;
+      padding: 0 0 0 100px;
+    }
+  }
+  // hero img area ENDS
+
+  // MAIN INTRO AREA-----------------------------
+
+  .main-intro-area {
+    width: 100%;
+    text-align: center;
+
+    .main-header {
+      padding: 0 10px 0 10px;
+    }
+
+    .main-subheader {
+      padding: 10px 20px 0 20px;
+    }
+  }
+
+  // FOOTER -------------------------------------
+
+  .footer {
+    display: block;
+
+    .social-media-area {
+      padding: 0;
+
+      .social-icon {
+        top: 36vh;
+        left: 10vw;
+        padding: 0 20px 0 0;
+      }
+    }
+    // social media area ENDS
+
+    .email-area {
+      text-align: left;
+      left: 10vw;
+      top: 38vh;
+    }
+
+    .po-box-area {
+      text-align: left;
+      left: 60vw;
+      top: 30.5vh;
+    }
+
+  }
+
+}
