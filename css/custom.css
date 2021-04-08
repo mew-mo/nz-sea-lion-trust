@@ -47,7 +47,11 @@ p {
   display: flex;
   flex-wrap: wrap; }
   .nav-area .mobile-menu-area {
-    display: none; }
+    position: absolute;
+    top: 5vh;
+    left: 90vw;
+    color: #16425B;
+    font-size: 40px; }
   .nav-area .logo {
     width: 140px;
     margin-top: 3vh;
@@ -59,7 +63,7 @@ p {
   .nav-area .nav-item, .nav-area .donate-btn,
   .nav-area .nav-subitem {
     position: relative;
-    left: 45vw;
+    left: 15vw;
     color: #85A5D6;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
@@ -156,7 +160,7 @@ p {
   display: flex;
   color: #373D3F;
   height: 10vh;
-  width: 100%; }
+  width: 100vw; }
   .footer .social-media-area {
     color: #85A5D6;
     font-size: 40px;
