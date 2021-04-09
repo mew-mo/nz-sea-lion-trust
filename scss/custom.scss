@@ -31,8 +31,10 @@
   @include transition;
 }
 
-// we can use @extend [.class] to include all the attributes of a class
-// main diff is extend uses a CLASS! rather than calling a mixin
+%mina-font-default {
+  font-weight: 400;
+  font-family: 'Mina', sans-serif;
+}
 
 /*----------------- UNIVERSAL ELEMENTS ----------------- */
 
@@ -55,40 +57,52 @@ body {
 h1 {
   color: $navy;
   font-size: 7.53rem;
-  font-weight: 400;
-  font-family: 'Mina', sans-serif;
   line-height: 120px;
+  @extend %mina-font-default;
 }
 
 h2 {
   font-size: 5.378rem;
-  font-family: 'Mina', sans-serif;
+  @extend %mina-font-default;
 }
 
 h3 {
+  color: $off-white;
   font-size: 3.842rem;
-  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  @extend %mina-font-default;
 }
 
 h4 {
+  color: $navy;
   font-size: 2.744rem;
-  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  @extend %mina-font-default;
 }
 
 h5 {
   color: $blue;
   font-size: 1.96rem;
-  font-weight: 400;
-  font-family: 'Mina', sans-serif;
+  @extend %mina-font-default;
 }
 
 h6 {
+  color: $navy;
   font-size: 1.4rem;
-  font-family: 'Roboto', sans-serif;
+  @extend %mina-font-default;
 }
 
 p {
+  color: $off-black;
   font-family: 'Roboto', sans-serif;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.blue {
+  color: $blue;
 }
 
 /*----------------- NAVIGATION -------------------------- */
@@ -109,7 +123,7 @@ p {
   .logo {
     width: 140px;
     margin-top: 3vh;
-    padding-left: 60px;
+    padding-left: 5vw;
   }
 
   .dropdown,
@@ -120,8 +134,8 @@ p {
   .nav-item,
   .nav-subitem {
     position: relative;
-    left: 15vw;
-    // was 45 vw
+    left: 45vw;
+    // was 15 vw
     color: $blue;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
@@ -161,7 +175,7 @@ p {
   }
 
   .donate-btn {
-    margin: 4.7vh 0 0 30px;
+    margin: 4.7vh 0 0 2vw;
     @extend .nav-item;
     @include button;
     @include border-radius;
@@ -178,7 +192,7 @@ p {
 
 // -------------- MAIN CONTAINER -----------------------------
 
-.container {
+.main-container {
   display: flex;
   height: 75vh;
   flex-direction: row;
@@ -193,7 +207,7 @@ p {
 
   .sealion-hero-img {
     width: 80%;
-    padding: 50px 0 0 150px;
+    padding: 5vh 0 0 7vw;
   }
 }
 
@@ -204,33 +218,151 @@ p {
   width: 50%;
 
   .main-header {
-    padding: 100px 150px 0 0;
+    padding: 7vh 15vw 0 0;
   }
 
   .main-subheader {
-    padding: 10px 300px 0 0;
-  }
-
-  .learn-btn {
-    margin: 30px 0 0 -5px;
-    @include button($off-white, $aqua);
-    @include border-radius;
-
-    .more-arrow {
-      padding-left: 10px;
-    }
-
-  }
-  // learn button ENDS
-
-  .learn-btn:hover {
-    background: $dark-aqua;
-    @include transition;
+    padding: 2vh 15vw 0 0;
   }
 
 }
 // main intro area ENDS
 
+.primary-btn {
+  margin: 30px 0 0 -5px;
+  @include button($off-white, $aqua);
+  @include border-radius;
+}
+
+.primary-btn:hover {
+  background: $dark-aqua;
+  @include transition;
+}
+
+.more-arrow {
+  padding-left: 10px;
+}
+
+// ---------------- PAGE BANNERS -------------------------------
+
+.page-banner {
+  height: 28vh;
+  width: 100vw;
+  background-color: $blue;
+  text-align: center;
+  margin: 3vh 0 0 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+  .banner-header {
+    padding-top: 6vh;
+  }
+
+  .banner-subheader {
+    color: $off-white;
+  }
+}
+
+// --------------- PAGE INTRO ----------------------------------
+
+.page-intro-area {
+  display: flex;
+  margin: 10vh 15vw 0 0;
+
+  .intro-img-area {
+    width: 50%;
+
+    .intro-img {
+      width: 33vw;
+      margin: 0 0 0 10vw;
+      @include border-radius;
+    }
+  }
+  // intro img area ENDS
+
+  .intro-text-area {
+    width: 50%;
+    margin: 0 0 0 5vw;
+
+    .intro-header {
+      margin: 2vh 0 3vh 0;
+    }
+  }
+  // intro text area ENDS
+
+}
+
+.img-subtitle {
+  color: $grey;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin: 2vh 0 0 10vw;
+}
+
+.secondary-btn {
+  @include button;
+  @include border-radius;
+}
+
+.secondary-btn:hover {
+  color: $off-white;
+  background: $aqua;
+  @include transition;
+}
+
+// ----------------- BOARD MEMBERS AREA ------------------------
+
+.board-members-area {
+  background-color: $dark-off-white;
+  margin: 10vh 0 0 0;
+
+  .member-card {
+    height: 38vh;
+    width: 18vw;
+    background-color: $blue;
+    margin: 5vh 5vw 7vh 5vw;
+    @include border-radius;
+  }
+
+  .card-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-header,
+  .card-subheader {
+    color: $off-white;
+    text-align: center;
+  }
+
+  .card-header {
+    padding: 15px 0 0 0;
+  }
+
+  .card-subheader {
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid $off-white;
+  }
+
+  .card-info {
+    color: $off-white;
+    padding: 15px 15px 0 15px;
+  }
+
+}
+
+.section-header {
+  text-align: center;
+  padding: 6vh 0 0 0;
+}
+
+// ----------------- OUR STORY AREA ----------------------------
+
+.our-story-area {
+  background-color: $dark-off-white;
+}
 
 // ----------------- FOOTER ------------------------------------
 
@@ -243,7 +375,7 @@ p {
   .social-media-area {
     color: $blue;
     font-size: 40px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 3vw;
 
     .social-icon {
       position: relative;
@@ -264,19 +396,22 @@ p {
   .email-area {
     position: relative;
     left: 65vw;
-    // was 65vw
     top: 35px;
   }
 
   .po-box-area {
     position: relative;
     left: 78vw;
-    // was 78vw
     top: -40px;
   }
 
 }
 // footer ENDS
+
+
+.extra-footer-padding {
+  padding: 5vh 0 0 0;
+}
 
 // -------------------- ALL MEDIA QUERIES ---------------------
 

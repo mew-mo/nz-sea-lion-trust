@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: 'Mina', sans-serif; }
+
 /*----------------- UNIVERSAL ELEMENTS ----------------- */
 * {
   font-size: 16px;
@@ -13,34 +17,38 @@ body {
 h1 {
   color: #16425B;
   font-size: 7.53rem;
-  font-weight: 400;
-  font-family: 'Mina', sans-serif;
   line-height: 120px; }
 
 h2 {
-  font-size: 5.378rem;
-  font-family: 'Mina', sans-serif; }
+  font-size: 5.378rem; }
 
 h3 {
+  color: #FCF9F7;
   font-size: 3.842rem;
-  font-family: 'Mina', sans-serif; }
+  text-transform: uppercase; }
 
 h4 {
+  color: #16425B;
   font-size: 2.744rem;
-  font-family: 'Mina', sans-serif; }
+  text-transform: uppercase; }
 
 h5 {
   color: #85A5D6;
-  font-size: 1.96rem;
-  font-weight: 400;
-  font-family: 'Mina', sans-serif; }
+  font-size: 1.96rem; }
 
 h6 {
-  font-size: 1.4rem;
-  font-family: 'Roboto', sans-serif; }
+  color: #16425B;
+  font-size: 1.4rem; }
 
 p {
+  color: #373D3F;
   font-family: 'Roboto', sans-serif; }
+
+.bold {
+  font-weight: 700; }
+
+.blue {
+  color: #85A5D6; }
 
 /*----------------- NAVIGATION -------------------------- */
 .nav-area {
@@ -55,7 +63,7 @@ p {
   .nav-area .logo {
     width: 140px;
     margin-top: 3vh;
-    padding-left: 60px; }
+    padding-left: 5vw; }
   .nav-area .dropdown,
   .nav-area .nav-item,
   .nav-area .donate-btn {
@@ -63,7 +71,7 @@ p {
   .nav-area .nav-item, .nav-area .donate-btn,
   .nav-area .nav-subitem {
     position: relative;
-    left: 15vw;
+    left: 45vw;
     color: #85A5D6;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
@@ -92,7 +100,7 @@ p {
   .nav-area .dropdown:hover .dropdown-content {
     display: block; }
   .nav-area .donate-btn {
-    margin: 4.7vh 0 0 30px;
+    margin: 4.7vh 0 0 2vw;
     color: #66C8CA;
     height: 55px;
     font-size: 1.4rem;
@@ -113,7 +121,7 @@ p {
     transition: 0.5s;
     transition-timing-function: ease; }
 
-.container {
+.main-container {
   display: flex;
   height: 75vh;
   flex-direction: row; }
@@ -124,37 +132,134 @@ p {
   width: 50%; }
   .hero-img-area .sealion-hero-img {
     width: 80%;
-    padding: 50px 0 0 150px; }
+    padding: 5vh 0 0 7vw; }
 
 .main-intro-area {
   height: 100%;
   width: 50%; }
   .main-intro-area .main-header {
-    padding: 100px 150px 0 0; }
+    padding: 7vh 15vw 0 0; }
   .main-intro-area .main-subheader {
-    padding: 10px 300px 0 0; }
-  .main-intro-area .learn-btn {
-    margin: 30px 0 0 -5px;
-    color: #FCF9F7;
-    height: 55px;
-    font-size: 1.4rem;
-    font-family: 'Mina', sans-serif;
-    text-transform: uppercase;
-    padding: 5px 30px 0 30px;
-    background: #66C8CA;
-    border: 2px solid #FCF9F7;
-    cursor: pointer;
-    transition: 0.5s;
-    transition-timing-function: ease;
+    padding: 2vh 15vw 0 0; }
+
+.primary-btn {
+  margin: 30px 0 0 -5px;
+  color: #FCF9F7;
+  height: 55px;
+  font-size: 1.4rem;
+  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  padding: 5px 30px 0 30px;
+  background: #66C8CA;
+  border: 2px solid #FCF9F7;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  -webkit-border-radius: 73px;
+  -moz-border-radius: 73px;
+  border-radius: 73px; }
+
+.primary-btn:hover {
+  background: #389799;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+
+.more-arrow {
+  padding-left: 10px; }
+
+.page-banner {
+  height: 28vh;
+  width: 100vw;
+  background-color: #85A5D6;
+  text-align: center;
+  margin: 3vh 0 0 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%; }
+  .page-banner .banner-header {
+    padding-top: 6vh; }
+  .page-banner .banner-subheader {
+    color: #FCF9F7; }
+
+.page-intro-area {
+  display: flex;
+  margin: 10vh 15vw 0 0; }
+  .page-intro-area .intro-img-area {
+    width: 50%; }
+    .page-intro-area .intro-img-area .intro-img {
+      width: 33vw;
+      margin: 0 0 0 10vw;
+      -webkit-border-radius: 73px;
+      -moz-border-radius: 73px;
+      border-radius: 73px; }
+  .page-intro-area .intro-text-area {
+    width: 50%;
+    margin: 0 0 0 5vw; }
+    .page-intro-area .intro-text-area .intro-header {
+      margin: 2vh 0 3vh 0; }
+
+.img-subtitle {
+  color: #848687;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin: 2vh 0 0 10vw; }
+
+.secondary-btn {
+  color: #66C8CA;
+  height: 55px;
+  font-size: 1.4rem;
+  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  padding: 5px 30px 0 30px;
+  background: #FCF9F7;
+  border: 2px solid #66C8CA;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  -webkit-border-radius: 73px;
+  -moz-border-radius: 73px;
+  border-radius: 73px; }
+
+.secondary-btn:hover {
+  color: #FCF9F7;
+  background: #66C8CA;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+
+.board-members-area {
+  background-color: #F6F1EF;
+  margin: 10vh 0 0 0; }
+  .board-members-area .member-card {
+    height: 38vh;
+    width: 18vw;
+    background-color: #85A5D6;
+    margin: 5vh 5vw 7vh 5vw;
     -webkit-border-radius: 73px;
     -moz-border-radius: 73px;
     border-radius: 73px; }
-    .main-intro-area .learn-btn .more-arrow {
-      padding-left: 10px; }
-  .main-intro-area .learn-btn:hover {
-    background: #389799;
-    transition: 0.5s;
-    transition-timing-function: ease; }
+  .board-members-area .card-area {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .board-members-area .card-header,
+  .board-members-area .card-subheader {
+    color: #FCF9F7;
+    text-align: center; }
+  .board-members-area .card-header {
+    padding: 15px 0 0 0; }
+  .board-members-area .card-subheader {
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #FCF9F7; }
+  .board-members-area .card-info {
+    color: #FCF9F7;
+    padding: 15px 15px 0 15px; }
+
+.section-header {
+  text-align: center;
+  padding: 6vh 0 0 0; }
+
+.our-story-area {
+  background-color: #F6F1EF; }
 
 .footer {
   display: flex;
@@ -164,7 +269,7 @@ p {
   .footer .social-media-area {
     color: #85A5D6;
     font-size: 40px;
-    padding: 0 0 0 60px; }
+    padding: 0 0 0 3vw; }
     .footer .social-media-area .social-icon {
       position: relative;
       top: 30px;
@@ -185,6 +290,9 @@ p {
     left: 78vw;
     top: -40px; }
 
+.extra-footer-padding {
+  padding: 5vh 0 0 0; }
+
 @media only screen and (max-width: 600px) {
   .nav-item, .nav-area .donate-btn,
   .nav-subitem,
@@ -195,7 +303,7 @@ p {
   .mobile-menu-area {
     display: block; }
 
-  .container {
+  .main-container {
     display: block; }
 
   .hero-img-area {
