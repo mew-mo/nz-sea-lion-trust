@@ -51,27 +51,36 @@ p {
   color: #85A5D6; }
 
 /*----------------- NAVIGATION -------------------------- */
-.nav-area {
+.nav-area,
+.nav-links {
   display: flex;
   flex-wrap: wrap; }
-  .nav-area .mobile-menu-area {
+  .nav-area .mobile-menu,
+  .nav-links .mobile-menu {
+    display: none;
     position: absolute;
     top: 5vh;
     left: 90vw;
     color: #16425B;
-    font-size: 40px; }
-  .nav-area .logo {
+    font-size: 30px; }
+  .nav-area .logo,
+  .nav-links .logo {
     width: 140px;
     margin-top: 3vh;
     padding-left: 5vw; }
   .nav-area .dropdown,
   .nav-area .nav-item,
-  .nav-area .donate-btn {
+  .nav-area .donate-btn,
+  .nav-links .dropdown,
+  .nav-links .nav-item,
+  .nav-links .donate-btn {
     margin-top: 5vh; }
   .nav-area .nav-item, .nav-area .donate-btn,
-  .nav-area .nav-subitem {
+  .nav-area .nav-subitem,
+  .nav-links .nav-item,
+  .nav-links .donate-btn,
+  .nav-links .nav-subitem {
     position: relative;
-    left: 45vw;
     color: #85A5D6;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
@@ -80,26 +89,37 @@ p {
     padding: 10px 10px 0 10px;
     transition: 0.5s;
     transition-timing-function: ease; }
-  .nav-area .nav-item:hover, .nav-area .donate-btn:hover,
-  .nav-area .nav-subitem:hover {
+  .nav-area .nav-item:hover:not(.donate-btn), .nav-area .donate-btn:hover:not(.donate-btn),
+  .nav-area .nav-subitem:hover,
+  .nav-links .nav-item:hover:not(.donate-btn),
+  .nav-links .donate-btn:hover:not(.donate-btn),
+  .nav-links .nav-subitem:hover {
     color: #66C8CA;
-    border-bottom: 2px solid #66C8CA;
+    border-bottom: 1px solid #66C8CA;
+    padding-bottom: 8px;
     transition: 0.5s;
     transition-timing-function: ease; }
-  .nav-area .drop-btn {
+  .nav-area .drop-btn,
+  .nav-links .drop-btn {
     background: none;
     border: none;
     padding: 10px; }
-  .nav-area .dropdown-content {
+  .nav-area .dropdown-content,
+  .nav-links .dropdown-content {
     display: none;
     position: absolute;
+    margin-left: 15px;
     background-color: #F6F1EF; }
-    .nav-area .dropdown-content .nav-subitem {
+    .nav-area .dropdown-content .nav-subitem,
+    .nav-links .dropdown-content .nav-subitem {
       display: block;
       text-align: left; }
-  .nav-area .dropdown:hover .dropdown-content {
-    display: block; }
-  .nav-area .donate-btn {
+  .nav-area .dropdown:hover .dropdown-content,
+  .nav-links .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute; }
+  .nav-area .donate-btn,
+  .nav-links .donate-btn {
     margin: 4.7vh 0 0 2vw;
     color: #66C8CA;
     height: 55px;
@@ -115,11 +135,15 @@ p {
     -webkit-border-radius: 73px;
     -moz-border-radius: 73px;
     border-radius: 73px; }
-  .nav-area .donate-btn:hover {
+  .nav-area .donate-btn:hover,
+  .nav-links .donate-btn:hover {
     color: #FCF9F7;
     background: #66C8CA;
     transition: 0.5s;
     transition-timing-function: ease; }
+
+.nav-links {
+  margin-left: 20%; }
 
 .main-container {
   display: flex;
@@ -138,9 +162,9 @@ p {
   height: 100%;
   width: 50%; }
   .main-intro-area .main-header {
-    padding: 7vh 15vw 0 0; }
+    padding: 7vh 10vw 0 0; }
   .main-intro-area .main-subheader {
-    padding: 2vh 15vw 0 0; }
+    padding: 2vh 10vw 0 0; }
 
 .primary-btn {
   margin: 30px 0 0 -5px;
@@ -180,21 +204,25 @@ p {
   .page-banner .banner-subheader {
     color: #FCF9F7; }
 
-.page-intro-area {
-  display: flex;
-  margin: 10vh 15vw 0 0; }
-  .page-intro-area .intro-img-area {
+.intro-area {
+  padding-top: 10vh; }
+
+.left-img-section-layout {
+  margin: 0 10vw 0 0; }
+  .left-img-section-layout .left-img-area {
     width: 50%; }
-    .page-intro-area .intro-img-area .intro-img {
+    .left-img-section-layout .left-img-area img {
       width: 33vw;
       margin: 0 0 0 10vw;
       -webkit-border-radius: 73px;
       -moz-border-radius: 73px;
       border-radius: 73px; }
-  .page-intro-area .intro-text-area {
+  .left-img-section-layout .right-text-area {
     width: 50%;
     margin: 0 0 0 5vw; }
-    .page-intro-area .intro-text-area .intro-header {
+    .left-img-section-layout .right-text-area h5 {
+      margin: 0 0 3vh 0; }
+    .left-img-section-layout .right-text-area .intro-header {
       margin: 2vh 0 3vh 0; }
 
 .img-subtitle {
@@ -230,10 +258,9 @@ p {
   background-color: #F6F1EF;
   margin: 10vh 0 0 0; }
   .board-members-area .member-card {
-    height: 38vh;
-    width: 18vw;
     background-color: #85A5D6;
     margin: 5vh 5vw 7vh 5vw;
+    padding: 0 10px 30px 10px;
     -webkit-border-radius: 73px;
     -moz-border-radius: 73px;
     border-radius: 73px; }
@@ -256,23 +283,43 @@ p {
 
 .section-header {
   text-align: center;
-  padding: 6vh 0 0 0; }
+  padding: 5vh 0 5vh 0; }
 
-.our-story-area {
-  background-color: #F6F1EF; }
+.section-content {
+  display: flex;
+  padding-bottom: 10vh; }
+
+.right-img-section-layout {
+  background-color: #F6F1EF;
+  width: 100%;
+  margin: 10vh 15vw 0 0; }
+  .right-img-section-layout .right-img-area {
+    width: 50%; }
+    .right-img-section-layout .right-img-area img {
+      width: 33vw;
+      margin: 5vw 10vw 0 0;
+      -webkit-border-radius: 73px;
+      -moz-border-radius: 73px;
+      border-radius: 73px; }
+  .right-img-section-layout .left-text-area {
+    width: 50%;
+    margin: 0 5vw 0 10vw; }
+    .right-img-section-layout .left-text-area h5 {
+      margin: 2vh 0 3vh 0; }
 
 .footer {
   display: flex;
   color: #373D3F;
   height: 10vh;
-  width: 100vw; }
+  width: 100vw;
+  padding: 5vh 0 0 0; }
   .footer .social-media-area {
-    color: #85A5D6;
     font-size: 40px;
     padding: 0 0 0 3vw; }
     .footer .social-media-area .social-icon {
       position: relative;
       top: 30px;
+      color: #85A5D6;
       padding: 0 0 0 30px;
       cursor: pointer;
       transition: 0.5s;
@@ -283,24 +330,28 @@ p {
       transition-timing-function: ease; }
   .footer .email-area {
     position: relative;
-    left: 65vw;
+    left: 54vw;
     top: 35px; }
   .footer .po-box-area {
     position: relative;
-    left: 78vw;
+    left: 70vw;
     top: -40px; }
 
-.extra-footer-padding {
-  padding: 5vh 0 0 0; }
-
 @media only screen and (max-width: 600px) {
+  .nav-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+
   .nav-item, .nav-area .donate-btn,
+  .nav-links .donate-btn,
   .nav-subitem,
   .dropdown,
   .drop-btn {
     display: none; }
 
-  .mobile-menu-area {
+  .mobile-menu {
     display: block; }
 
   .main-container {

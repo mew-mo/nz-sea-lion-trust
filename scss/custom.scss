@@ -107,17 +107,18 @@ p {
 
 /*----------------- NAVIGATION -------------------------- */
 
-.nav-area {
+.nav-area,
+.nav-links {
   display: flex;
   flex-wrap: wrap;
 
-  .mobile-menu-area {
-    // display: none;
+  .mobile-menu {
+    display: none;
     position: absolute;
     top: 5vh;
     left: 90vw;
     color: $navy;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .logo {
@@ -134,8 +135,6 @@ p {
   .nav-item,
   .nav-subitem {
     position: relative;
-    left: 45vw;
-    // was 15 vw
     color: $blue;
     font-size: 1.4rem;
     font-family: 'Mina', sans-serif;
@@ -145,10 +144,11 @@ p {
     @include transition;
   }
 
-  .nav-item:hover,
+  .nav-item:hover:not(.donate-btn),
   .nav-subitem:hover {
     color: $aqua;
-    border-bottom: 2px solid $aqua;
+    border-bottom: 1px solid $aqua;
+    padding-bottom: 8px;
     @include transition;
   }
 
@@ -161,6 +161,7 @@ p {
   .dropdown-content {
     display: none;
     position: absolute;
+    margin-left: 15px;
     background-color: $dark-off-white;
 
     .nav-subitem {
@@ -172,6 +173,7 @@ p {
 
   .dropdown:hover .dropdown-content {
     display: block;
+    position: absolute;
   }
 
   .donate-btn {
@@ -189,6 +191,10 @@ p {
 
 }
 // nav area ENDS
+
+.nav-links {
+  margin-left: 20%;
+}
 
 // -------------- MAIN CONTAINER -----------------------------
 
@@ -218,11 +224,11 @@ p {
   width: 50%;
 
   .main-header {
-    padding: 7vh 15vw 0 0;
+    padding: 7vh 10vw 0 0;
   }
 
   .main-subheader {
-    padding: 2vh 15vw 0 0;
+    padding: 2vh 10vw 0 0;
   }
 
 }
@@ -263,16 +269,19 @@ p {
   }
 }
 
-// --------------- PAGE INTRO ----------------------------------
+// --------------- LAYOUT WITH LEFT IMAGE AND TEXT ON THE RIGHT ----------------------------------
 
-.page-intro-area {
-  display: flex;
-  margin: 10vh 15vw 0 0;
+.intro-area {
+  padding-top: 10vh;
+}
 
-  .intro-img-area {
+.left-img-section-layout {
+  margin: 0 10vw 0 0;
+
+  .left-img-area {
     width: 50%;
 
-    .intro-img {
+    img {
       width: 33vw;
       margin: 0 0 0 10vw;
       @include border-radius;
@@ -280,17 +289,21 @@ p {
   }
   // intro img area ENDS
 
-  .intro-text-area {
+  .right-text-area {
     width: 50%;
     margin: 0 0 0 5vw;
+
+    h5 {
+      margin: 0 0 3vh 0;
+    }
 
     .intro-header {
       margin: 2vh 0 3vh 0;
     }
   }
   // intro text area ENDS
-
 }
+// intro area ENDS
 
 .img-subtitle {
   color: $grey;
@@ -318,10 +331,9 @@ p {
   margin: 10vh 0 0 0;
 
   .member-card {
-    height: 38vh;
-    width: 18vw;
     background-color: $blue;
     margin: 5vh 5vw 7vh 5vw;
+    padding: 0 10px 30px 10px;
     @include border-radius;
   }
 
@@ -355,13 +367,42 @@ p {
 
 .section-header {
   text-align: center;
-  padding: 6vh 0 0 0;
+  padding: 5vh 0 5vh 0;
 }
 
-// ----------------- OUR STORY AREA ----------------------------
+// ----------------- LAYOUT WITH RIGHT IMAGE AND TEXT ON THE LEFT ----------------------------
 
-.our-story-area {
+.section-content {
+  display: flex;
+  padding-bottom: 10vh;
+}
+
+.right-img-section-layout {
   background-color: $dark-off-white;
+  width: 100%;
+  margin: 10vh 15vw 0 0;
+
+  .right-img-area {
+    width: 50%;
+
+    img {
+      width: 33vw;
+      margin: 5vw 10vw 0 0;
+      @include border-radius;
+    }
+  }
+  // img area ENDS
+
+  .left-text-area {
+    width: 50%;
+    margin: 0 5vw 0 10vw;
+
+    h5 {
+      margin: 2vh 0 3vh 0;
+    }
+  }
+  // text area ENDS
+
 }
 
 // ----------------- FOOTER ------------------------------------
@@ -371,15 +412,16 @@ p {
   color: $off-black;
   height: 10vh;
   width: 100vw;
+  padding: 5vh 0 0 0;
 
   .social-media-area {
-    color: $blue;
     font-size: 40px;
     padding: 0 0 0 3vw;
 
     .social-icon {
       position: relative;
       top: 30px;
+      color: $blue;
       padding: 0 0 0 30px;
       cursor: pointer;
       @include transition;
@@ -395,23 +437,19 @@ p {
 
   .email-area {
     position: relative;
-    left: 65vw;
+    left: 54vw;
     top: 35px;
   }
 
   .po-box-area {
     position: relative;
-    left: 78vw;
+    left: 70vw;
     top: -40px;
   }
 
 }
 // footer ENDS
 
-
-.extra-footer-padding {
-  padding: 5vh 0 0 0;
-}
 
 // -------------------- ALL MEDIA QUERIES ---------------------
 

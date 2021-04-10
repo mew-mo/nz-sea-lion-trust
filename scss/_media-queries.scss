@@ -4,6 +4,14 @@
 
   // NAVIGATION ----------------------------------
 
+
+  .nav-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
   .nav-item,
   .nav-subitem,
   .dropdown,
@@ -11,7 +19,7 @@
     display: none;
   }
 
-  .mobile-menu-area {
+  .mobile-menu {
     display: block;
   }
 
