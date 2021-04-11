@@ -1,3 +1,33 @@
+// for smaller laptops and desktops between the widths of 1025px and 1280px
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+  .nav-links {
+    margin-left: 20vw;
+  }
+
+  .hero-img-area {
+
+    .sealion-hero-img {
+      padding: 5vh 0 0 7vw;
+    }
+
+  }
+
+  .email-area {
+    position: relative;
+    left: 55vw;
+    top: 35px;
+  }
+
+  .po-box-area {
+    position: relative;
+    left: 72vw;
+    top: -40px;
+  }
+
+}
+
+
 // extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
 

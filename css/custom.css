@@ -45,7 +45,8 @@ p {
   font-family: 'Roboto', sans-serif; }
 
 .bold {
-  font-weight: 700; }
+  font-size: inherit;
+  font-weight: bold; }
 
 .blue {
   color: #85A5D6; }
@@ -99,6 +100,10 @@ p {
     padding-bottom: 8px;
     transition: 0.5s;
     transition-timing-function: ease; }
+  .nav-area .active,
+  .nav-links .active {
+    color: #66C8CA;
+    border-bottom: 1px solid #66C8CA; }
   .nav-area .drop-btn,
   .nav-links .drop-btn {
     background: none;
@@ -143,66 +148,16 @@ p {
     transition-timing-function: ease; }
 
 .nav-links {
-  margin-left: 20%; }
+  margin-left: 43vw; }
 
 .main-container {
   display: flex;
   height: 75vh;
   flex-direction: row; }
 
-.hero-img-area {
-  display: flex;
-  height: 100%;
-  width: 50%; }
-  .hero-img-area .sealion-hero-img {
-    width: 80%;
-    padding: 5vh 0 0 7vw; }
-
-.main-intro-area {
-  height: 100%;
-  width: 50%; }
-  .main-intro-area .main-header {
-    padding: 7vh 10vw 0 0; }
-  .main-intro-area .main-subheader {
-    padding: 2vh 10vw 0 0; }
-
-.primary-btn {
-  margin: 30px 0 0 -5px;
-  color: #FCF9F7;
-  height: 55px;
-  font-size: 1.4rem;
-  font-family: 'Mina', sans-serif;
-  text-transform: uppercase;
-  padding: 5px 30px 0 30px;
-  background: #66C8CA;
-  border: 2px solid #FCF9F7;
-  cursor: pointer;
-  transition: 0.5s;
-  transition-timing-function: ease;
-  -webkit-border-radius: 73px;
-  -moz-border-radius: 73px;
-  border-radius: 73px; }
-
-.primary-btn:hover {
-  background: #389799;
-  transition: 0.5s;
-  transition-timing-function: ease; }
-
-.more-arrow {
-  padding-left: 10px; }
-
-.page-banner {
-  height: 28vh;
-  width: 100vw;
-  background-color: #85A5D6;
+.section-header {
   text-align: center;
-  margin: 3vh 0 0 0;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%; }
-  .page-banner .banner-header {
-    padding-top: 6vh; }
-  .page-banner .banner-subheader {
-    color: #FCF9F7; }
+  padding: 5vh 0 5vh 0; }
 
 .intro-area {
   padding-top: 10vh; }
@@ -232,6 +187,53 @@ p {
   text-align: center;
   margin: 2vh 0 0 10vw; }
 
+.section-content {
+  display: flex;
+  padding-bottom: 10vh; }
+
+.right-img-section-layout {
+  background-color: #F6F1EF;
+  width: 100%;
+  margin: 10vh 15vw 0 0; }
+  .right-img-section-layout .right-img-area {
+    width: 50%; }
+    .right-img-section-layout .right-img-area img {
+      width: 33vw;
+      margin: 5vw 10vw 0 0;
+      -webkit-border-radius: 73px;
+      -moz-border-radius: 73px;
+      border-radius: 73px; }
+  .right-img-section-layout .left-text-area {
+    width: 50%;
+    margin: 0 5vw 0 10vw; }
+    .right-img-section-layout .left-text-area h5 {
+      margin: 2vh 0 3vh 0; }
+
+.primary-btn {
+  margin: 30px 0 0 -5px;
+  color: #FCF9F7;
+  height: 55px;
+  font-size: 1.4rem;
+  font-family: 'Mina', sans-serif;
+  text-transform: uppercase;
+  padding: 5px 30px 0 30px;
+  background: #66C8CA;
+  border: 2px solid #FCF9F7;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  -webkit-border-radius: 73px;
+  -moz-border-radius: 73px;
+  border-radius: 73px; }
+
+.primary-btn:hover {
+  background: #389799;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+
+.more-arrow {
+  padding-left: 10px; }
+
 .secondary-btn {
   color: #66C8CA;
   height: 55px;
@@ -253,6 +255,34 @@ p {
   background: #66C8CA;
   transition: 0.5s;
   transition-timing-function: ease; }
+
+.hero-img-area {
+  display: flex;
+  height: 100%;
+  width: 50%; }
+  .hero-img-area .sealion-hero-img {
+    padding: 7vh 0 0 10vw; }
+
+.main-intro-area {
+  height: 100%;
+  width: 50%; }
+  .main-intro-area .main-header {
+    padding: 7vh 10vw 0 0; }
+  .main-intro-area .main-subheader {
+    padding: 2vh 10vw 0 0; }
+
+.page-banner {
+  height: 28vh;
+  width: 100vw;
+  background-color: #85A5D6;
+  text-align: center;
+  margin: 3vh 0 0 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%; }
+  .page-banner .banner-header {
+    padding-top: 6vh; }
+  .page-banner .banner-subheader {
+    color: #FCF9F7; }
 
 .board-members-area {
   background-color: #F6F1EF;
@@ -281,32 +311,6 @@ p {
     color: #FCF9F7;
     padding: 15px 15px 0 15px; }
 
-.section-header {
-  text-align: center;
-  padding: 5vh 0 5vh 0; }
-
-.section-content {
-  display: flex;
-  padding-bottom: 10vh; }
-
-.right-img-section-layout {
-  background-color: #F6F1EF;
-  width: 100%;
-  margin: 10vh 15vw 0 0; }
-  .right-img-section-layout .right-img-area {
-    width: 50%; }
-    .right-img-section-layout .right-img-area img {
-      width: 33vw;
-      margin: 5vw 10vw 0 0;
-      -webkit-border-radius: 73px;
-      -moz-border-radius: 73px;
-      border-radius: 73px; }
-  .right-img-section-layout .left-text-area {
-    width: 50%;
-    margin: 0 5vw 0 10vw; }
-    .right-img-section-layout .left-text-area h5 {
-      margin: 2vh 0 3vh 0; }
-
 .footer {
   display: flex;
   color: #373D3F;
@@ -330,13 +334,29 @@ p {
       transition-timing-function: ease; }
   .footer .email-area {
     position: relative;
-    left: 54vw;
+    right: -68vw;
     top: 35px; }
   .footer .po-box-area {
     position: relative;
-    left: 70vw;
+    right: -80vw;
     top: -40px; }
 
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .nav-links {
+    margin-left: 20vw; }
+
+  .hero-img-area .sealion-hero-img {
+    padding: 5vh 0 0 7vw; }
+
+  .email-area {
+    position: relative;
+    left: 55vw;
+    top: 35px; }
+
+  .po-box-area {
+    position: relative;
+    left: 72vw;
+    top: -40px; } }
 @media only screen and (max-width: 600px) {
   .nav-area {
     display: flex;
