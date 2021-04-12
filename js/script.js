@@ -9,7 +9,7 @@ $('document').ready(function(){
     });
   });
 
-  // slick card slider
+  // slick card slider - about us page
   $('.card-area').slick({
     dots: true,
     infinite: true,

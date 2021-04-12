@@ -1,4 +1,4 @@
-// for smaller laptops and desktops between the widths of 1025px and 1280px
+// for smaller laptops and desktops between the widths of 1025px and 1280px---
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 
   .nav-links {
@@ -10,7 +10,6 @@
     .sealion-hero-img {
       padding: 5vh 0 0 7vw;
     }
-
   }
 
   .email-area {
@@ -24,16 +23,14 @@
     left: 72vw;
     top: -40px;
   }
-
 }
 
 
-// extra small devices (phones, 600px and down)
+// extra small devices (phones, 600px and down)--------------------
 @media only screen and (max-width: 600px) {
 
 
   // NAVIGATION ----------------------------------
-
 
   .nav-area {
     display: flex;
@@ -55,7 +52,6 @@
     .mobile-menu {
       display: block;
     }
-
   }
 
 
@@ -65,7 +61,7 @@
     display: block;
   }
 
-  // HERO IMG AREA-------------------------------
+  // HERO IMG AREA - index page-------------------------------
 
   .hero-img-area {
     height: 70%;
@@ -80,7 +76,7 @@
   }
   // hero img area ENDS
 
-  // MAIN INTRO AREA-----------------------------
+  // MAIN INTRO AREA - index page -----------------------------
 
   .main-intro-area {
     width: 100%;
@@ -96,7 +92,7 @@
     }
   }
 
-  // ------------- REUSABLE SECTION LAYOUT CODE ------------
+  // REUSABLE SECTION LAYOUT CODE ------------------------------
 
   // section with img on left and text on right
 
@@ -129,7 +125,6 @@
     }
     // right text area ENDS
   }
-  // left-img-section-layout area ENDS
 
   // section with img on right and text on left
 
@@ -159,10 +154,8 @@
         text-align: center;
         padding: 5vh 0 0 0;
       }
-
     }
     // text area ENDS
-
   }
 
   // PAGE BANNERS--------------------------------
@@ -171,7 +164,6 @@
     .banner-header {
       line-height: 65px;
     }
-
   }
 
   // DONATE PAGE --------------------------------
@@ -216,12 +208,10 @@
       left: 60vw;
       top: 30.5vh;
     }
-
   }
 
-.media-query-margin-fix {
-  margin: -30vh 0 0 0;
-}
-
+  .media-query-margin-fix {
+    margin: -30vh 0 0 0;
+  }
 
 }

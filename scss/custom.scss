@@ -1,4 +1,4 @@
-// custom scsss
+// all custom scsss
 
 // importing variables
 
@@ -214,7 +214,6 @@ p {
       color: $off-white;
     }
   }
-
 }
 // nav area ENDS
 
@@ -348,7 +347,7 @@ p {
   @include transition;
 }
 
-// -------------- HERO IMG AREA------------------------------
+// -------------- HERO IMG AREA - index page --------------------
 
 .hero-img-area {
   display: flex;
@@ -360,7 +359,7 @@ p {
   }
 }
 
-// --------------- MAIN INTRO AREA -----------------------------
+// --------------- MAIN INTRO AREA - index page ----------------
 
 .main-intro-area {
   height: 100%;
@@ -374,7 +373,6 @@ p {
   .main-subheader {
     padding: 2vh 10vw 0 0;
   }
-
 }
 // main intro area ENDS
 
@@ -398,7 +396,7 @@ p {
   }
 }
 
-// ----------------- BOARD MEMBERS AREA ------------------------
+// ----------------- BOARD MEMBERS AREA - about us page ----------------
 
 .board-members-area {
   background-color: $dark-off-white;
@@ -453,7 +451,7 @@ p {
     padding-right: 50px;
   }
 
-// ---------------- DONATE CARDS -------------------------------
+// ---------------- DONATE CARDS - donate page --------------------------
 
 
 .donate-card {
@@ -515,7 +513,6 @@ p {
     padding: 0 0 0 3px;
     @include transition;
   }
-
 }
 
 
@@ -550,7 +547,6 @@ p {
       color: $aqua;
       @include transition;
     }
-
   }
   // social media area ENDS
 
@@ -565,7 +561,6 @@ p {
     right: -79vw;
     top: -40px;
   }
-
 }
 // footer ENDS
 
