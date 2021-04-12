@@ -77,15 +77,12 @@ p {
     padding-left: 5vw; }
   .nav-area .dropdown,
   .nav-area .nav-item,
-  .nav-area .donate-btn,
   .nav-links .dropdown,
-  .nav-links .nav-item,
-  .nav-links .donate-btn {
+  .nav-links .nav-item {
     margin-top: 5vh; }
-  .nav-area .nav-item, .nav-area .donate-btn,
+  .nav-area .nav-item,
   .nav-area .nav-subitem,
   .nav-links .nav-item,
-  .nav-links .donate-btn,
   .nav-links .nav-subitem {
     position: relative;
     color: #85A5D6;
@@ -96,10 +93,9 @@ p {
     padding: 10px 10px 0 10px;
     transition: 0.5s;
     transition-timing-function: ease; }
-  .nav-area .nav-item:hover:not(.donate-btn), .nav-area .donate-btn:hover:not(.donate-btn),
+  .nav-area .nav-item:hover:not(.donate-link),
   .nav-area .nav-subitem:hover,
-  .nav-links .nav-item:hover:not(.donate-btn),
-  .nav-links .donate-btn:hover:not(.donate-btn),
+  .nav-links .nav-item:hover:not(.donate-link),
   .nav-links .nav-subitem:hover {
     color: #66C8CA;
     border-bottom: 1px solid #66C8CA;
@@ -146,12 +142,19 @@ p {
     -webkit-border-radius: 73px;
     -moz-border-radius: 73px;
     border-radius: 73px; }
+    .nav-area .donate-btn a,
+    .nav-links .donate-btn a {
+      color: #66C8CA;
+      font-size: 1.4rem;
+      text-decoration: none; }
   .nav-area .donate-btn:hover,
   .nav-links .donate-btn:hover {
-    color: #FCF9F7;
     background: #66C8CA;
     transition: 0.5s;
     transition-timing-function: ease; }
+    .nav-area .donate-btn:hover a,
+    .nav-links .donate-btn:hover a {
+      color: #FCF9F7; }
 
 .nav-links {
   margin-left: 43vw; }
@@ -231,6 +234,10 @@ p {
   -webkit-border-radius: 73px;
   -moz-border-radius: 73px;
   border-radius: 73px; }
+  .primary-btn a {
+    color: #FCF9F7;
+    font-size: 1.4rem;
+    text-decoration: none; }
 
 .primary-btn:hover {
   background: #389799;
@@ -255,6 +262,10 @@ p {
   -webkit-border-radius: 73px;
   -moz-border-radius: 73px;
   border-radius: 73px; }
+  .secondary-btn a {
+    color: #66C8CA;
+    font-size: 1.4rem;
+    text-decoration: none; }
 
 .secondary-btn:hover {
   color: #FCF9F7;
@@ -293,30 +304,37 @@ p {
 .board-members-area {
   background-color: #F6F1EF;
   margin: 10vh 0 0 0; }
-  .board-members-area .member-card {
-    background-color: #85A5D6;
-    height: 33vh;
-    margin: 5vh 5vw 7vh 5vw;
-    padding: 0 10px 30px 10px;
-    -webkit-border-radius: 73px;
-    -moz-border-radius: 73px;
-    border-radius: 73px; }
-  .board-members-area .card-area {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .board-members-area .card-header,
-  .board-members-area .card-subheader {
-    color: #FCF9F7;
-    text-align: center; }
-  .board-members-area .card-header {
-    padding: 15px 0 0 0; }
-  .board-members-area .card-subheader {
-    padding: 0 0 15px 0;
-    border-bottom: 2px solid #FCF9F7; }
-  .board-members-area .card-info {
-    color: #FCF9F7;
-    padding: 15px 15px 0 15px; }
+
+.member-card, .donate-card {
+  background-color: #85A5D6;
+  height: 33vh;
+  margin: 5vh 5vw 7vh 5vw;
+  padding: 0 10px 30px 10px;
+  -webkit-border-radius: 73px;
+  -moz-border-radius: 73px;
+  border-radius: 73px; }
+
+.card-area {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card-header,
+.card-subheader,
+.donate-card .card-header {
+  color: #FCF9F7;
+  text-align: center; }
+
+.card-header {
+  padding: 15px 0 0 0; }
+
+.card-subheader, .donate-card .card-header {
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid #FCF9F7; }
+
+.card-info {
+  color: #FCF9F7;
+  padding: 15px 15px 0 15px; }
 
 .slick-prev:before,
 .slick-next:before {
@@ -327,6 +345,59 @@ p {
 
 .slick-next {
   padding-right: 50px; }
+
+.donate-card {
+  height: auto;
+  width: 37vh;
+  opacity: .6;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+  .donate-card .card-header {
+    padding-top: 1vh; }
+  .donate-card .card-info {
+    padding-bottom: 5vh; }
+  .donate-card img {
+    width: 105%;
+    margin-left: -4%;
+    border: 5px solid #FCF9F7;
+    -webkit-border-radius: 73px;
+    -moz-border-radius: 73px;
+    border-radius: 73px; }
+
+.donate-card:hover {
+  opacity: 1;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+  .donate-card:hover .action-btn {
+    background: #66C8CA;
+    transition: 0.5s;
+    transition-timing-function: ease; }
+    .donate-card:hover .action-btn .donate-arrow {
+      color: #FCF9F7;
+      transition: 0.5s;
+      transition-timing-function: ease; }
+
+.action-btn {
+  position: absolute;
+  top: 100%;
+  height: 80px;
+  width: 80px;
+  background: #FCF9F7;
+  margin-left: 15%;
+  border: 3px solid #FCF9F7;
+  box-shadow: inset 0 0 0 3px #66C8CA;
+  -webkit-border-radius: 73px;
+  -moz-border-radius: 73px;
+  border-radius: 73px;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+  .action-btn .donate-arrow {
+    color: #66C8CA;
+    font-size: 20px;
+    padding: 0 0 0 3px;
+    transition: 0.5s;
+    transition-timing-function: ease; }
 
 .footer {
   display: flex;
@@ -384,11 +455,11 @@ p {
     justify-content: center;
     align-items: center; }
 
-  .nav-item, .nav-area .donate-btn,
-  .nav-links .donate-btn,
+  .nav-item,
   .nav-subitem,
   .dropdown,
-  .drop-btn {
+  .drop-btn,
+  .donate-btn {
     display: none; }
 
   .nav-area .mobile-menu, .nav-links .mobile-menu {
@@ -447,6 +518,14 @@ p {
   .page-banner .banner-header {
     line-height: 65px; }
 
+  .donate-card-area {
+    flex-direction: column; }
+    .donate-card-area .card-info {
+      padding-bottom: 3vh; }
+    .donate-card-area .action-btn {
+      position: relative;
+      left: 70%; }
+
   .footer {
     display: block; }
     .footer .social-media-area a {
@@ -462,6 +541,9 @@ p {
     .footer .po-box-area {
       text-align: left;
       left: 60vw;
-      top: 30.5vh; } }
+      top: 30.5vh; }
+
+  .media-query-margin-fix {
+    margin: -30vh 0 0 0; } }
 
 /*# sourceMappingURL=custom.css.map */

@@ -45,7 +45,8 @@
   .nav-item,
   .nav-subitem,
   .dropdown,
-  .drop-btn {
+  .drop-btn,
+  .donate-btn {
     display: none;
   }
 
@@ -116,6 +117,7 @@
       text-align: center;
       margin: 0 0 0 7vw;
 
+
       p {
         text-align: left;
       }
@@ -172,9 +174,24 @@
 
   }
 
+  // DONATE PAGE --------------------------------
+
+  .donate-card-area {
+    flex-direction: column;
+
+    .card-info {
+      padding-bottom: 3vh;
+    }
+
+    .action-btn {
+      position: relative;
+      left: 70%;
+    }
+  }
+
   // FOOTER -------------------------------------
 
-  .footer {
+  .footer  {
     display: block;
 
     .social-media-area a {
@@ -201,5 +218,10 @@
     }
 
   }
+
+.media-query-margin-fix {
+  margin: -30vh 0 0 0;
+}
+
 
 }

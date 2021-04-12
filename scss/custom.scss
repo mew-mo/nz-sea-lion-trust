@@ -13,7 +13,7 @@
   border-radius: $radius;
 }
 
-@mixin transition($time: 0.5s) {
+@mixin transition($time: .5s) {
   transition: $time;
   transition-timing-function: ease;
 }
@@ -29,13 +29,13 @@
   border: 2px solid $color;
   cursor: pointer;
   @include transition;
-}
 
-// @mixin display($layout: flex) {
-//   display: $layout;
-// }
-//
-// @include display(block);
+  a {
+    color: $color;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+}
 
 %mina-font-default {
   font-weight: 400;
@@ -161,7 +161,7 @@ p {
     @include transition;
   }
 
-  .nav-item:hover:not(.donate-btn),
+  .nav-item:hover:not(.donate-link),
   .nav-subitem:hover {
     color: $aqua;
     border-bottom: 1px solid $aqua;
@@ -193,22 +193,26 @@ p {
   }
   // dropdown-content ENDS
 
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover {
+    .dropdown-content {
     display: block;
     position: absolute;
+    }
   }
 
   .donate-btn {
     margin: 4.7vh 0 0 2vw;
-    @extend .nav-item;
     @include button;
     @include border-radius;
   }
 
   .donate-btn:hover {
-    color: $off-white;
     background: $aqua;
     @include transition;
+
+    a {
+      color: $off-white;
+    }
   }
 
 }
@@ -399,41 +403,40 @@ p {
 .board-members-area {
   background-color: $dark-off-white;
   margin: 10vh 0 0 0;
+}
 
-  .member-card {
-    background-color: $blue;
-    height: 33vh;
-    margin: 5vh 5vw 7vh 5vw;
-    padding: 0 10px 30px 10px;
-    @include border-radius;
-  }
+.member-card {
+  background-color: $blue;
+  height: 33vh;
+  margin: 5vh 5vw 7vh 5vw;
+  padding: 0 10px 30px 10px;
+  @include border-radius;
+}
 
-  .card-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.card-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .card-header,
-  .card-subheader {
-    color: $off-white;
-    text-align: center;
-  }
+.card-header,
+.card-subheader {
+  color: $off-white;
+  text-align: center;
+}
 
-  .card-header {
-    padding: 15px 0 0 0;
-  }
+.card-header {
+  padding: 15px 0 0 0;
+}
 
-  .card-subheader {
-    padding: 0 0 15px 0;
-    border-bottom: 2px solid $off-white;
-  }
+.card-subheader {
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid $off-white;
+}
 
-  .card-info {
-    color: $off-white;
-    padding: 15px 15px 0 15px;
-  }
-
+.card-info {
+  color: $off-white;
+  padding: 15px 15px 0 15px;
 }
 
 // slick slider arrows
@@ -449,6 +452,71 @@ p {
   .slick-next {
     padding-right: 50px;
   }
+
+// ---------------- DONATE CARDS -------------------------------
+
+
+.donate-card {
+  height: auto;
+  width: 37vh;
+  opacity: .6;
+  cursor: pointer;
+  @extend .member-card;
+  @include transition;
+
+  .card-header {
+    padding-top: 1vh;
+    @extend .card-subheader;
+  }
+
+  .card-info {
+    padding-bottom: 5vh;
+  }
+
+  img {
+    width: 105%;
+    margin-left: -4%;
+    border: 5px solid $off-white;
+    @include border-radius;
+  }
+}
+
+.donate-card:hover {
+  opacity: 1;
+  @include transition;
+
+  .action-btn {
+    background: $aqua;
+    @include transition;
+
+    .donate-arrow {
+      color: $off-white;
+      @include transition;
+    }
+  }
+  // action btn ENDS
+}
+
+.action-btn {
+  position: absolute;
+  top: 100%;
+  height: 80px;
+  width: 80px;
+  background: $off-white;
+  margin-left: 15%;
+  border: 3px solid $off-white;
+  box-shadow: inset 0 0 0 3px $aqua;
+  @include border-radius;
+  @include transition;
+
+  .donate-arrow {
+    color: $aqua;
+    font-size: 20px;
+    padding: 0 0 0 3px;
+    @include transition;
+  }
+
+}
 
 
 // ----------------- FOOTER ------------------------------------
