@@ -31,6 +31,12 @@
   @include transition;
 }
 
+// @mixin display($layout: flex) {
+//   display: $layout;
+// }
+//
+// @include display(block);
+
 %mina-font-default {
   font-weight: 400;
   font-family: 'Mina', sans-serif;
@@ -108,6 +114,14 @@ p {
   color: $blue;
 }
 
+.top-padding {
+  padding-top: 10vh;
+}
+
+.remove-bottom-margin {
+  margin-bottom: -10vh;
+}
+
 /*----------------- NAVIGATION -------------------------- */
 
 .nav-area,
@@ -119,8 +133,8 @@ p {
     display: none;
     position: absolute;
     top: 5vh;
-    left: 90vw;
-    color: $navy;
+    left: 85vw;
+    color: $blue;
     font-size: 30px;
   }
 
@@ -347,6 +361,7 @@ p {
 .main-intro-area {
   height: 100%;
   width: 50%;
+  @extend .top-padding;
 
   .main-header {
     padding: 7vh 10vw 0 0;
@@ -387,6 +402,7 @@ p {
 
   .member-card {
     background-color: $blue;
+    height: 33vh;
     margin: 5vh 5vw 7vh 5vw;
     padding: 0 10px 30px 10px;
     @include border-radius;
@@ -420,6 +436,21 @@ p {
 
 }
 
+// slick slider arrows
+.slick-prev:before,
+.slick-next:before {
+  color: $aqua;
+}
+
+.slick-prev {
+    padding-left: 50px;
+  }
+
+  .slick-next {
+    padding-right: 50px;
+  }
+
+
 // ----------------- FOOTER ------------------------------------
 
 .footer {
@@ -430,14 +461,19 @@ p {
   padding: 5vh 0 0 0;
 
   .social-media-area {
-    font-size: 40px;
     padding: 0 0 0 3vw;
+  }
+
+  .social-media-area a {
+    font-size: 40px;
+    text-decoration: none;
+    padding: 0 0 0 2vw;
 
     .social-icon {
       position: relative;
       top: 30px;
       color: $blue;
-      padding: 0 0 0 30px;
+      padding: 0;
       cursor: pointer;
       @include transition;
     }
@@ -452,13 +488,13 @@ p {
 
   .email-area {
     position: relative;
-    right: -68vw;
+    right: -67vw;
     top: 35px;
   }
 
   .po-box-area {
     position: relative;
-    right: -80vw;
+    right: -79vw;
     top: -40px;
   }
 

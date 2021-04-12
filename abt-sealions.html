@@ -15,7 +15,6 @@
 
 <body>
 
-
     <!-- navigation area STARTS -->
     <div class="nav-area">
 
@@ -77,9 +76,13 @@
         </div>
         <!-- about us dropdown ENDS -->
 
-        <a href="#get-involved" class="dropdown nav-item">
-          Get Involved
-        </a>
+        <div class="dropdown">
+          <button class="drop-btn">
+            <a href="#get-involved" class="nav-item">
+              Get Involved
+            </a>
+          </button>
+        </div>
 
         <button class="donate-btn">
           Donate
@@ -112,7 +115,7 @@
         </div>
 
         <!-- intro text area STARTS -->
-        <div class="right-text-area">
+        <div class="right-text-area top-padding">
           <h6 class="intro-header">New Zealand Sea Lions are <span class="bold">critically endangered</span>, and one of the rarest sea lion species in the world.</h6>
 
           <p><span class="bold blue">Threat status:</span> Endemic species, main breeding colony in decline</p> <br>
@@ -145,12 +148,12 @@
     <!-- our story area STARTS -->
     <div class="right-img-section-layout">
 
-      <h4 class="section-header">Our Story</h4>
+      <h4 class="section-header remove-bottom-margin">Our Story</h4>
 
       <!-- section content STARTS -->
       <div class="section-content">
 
-        <div class="left-text-area">
+        <div class="left-text-area top-padding">
           <h5>1993, a miracle comes to NZ!</h5>
 
           <p>Early on a warm summer morning in 1993 farmer George MacIntosh stepped out the front door of his farm near Taieri Mouth, Dunedin. Hearing a cry he thought was a kid goat he followed the sound and found something unique. It was a sea lion mother nursing a pup! George was amazed and phoned the Department of Conservation. After a site visit DOC Rangers soon confirmed it was indeed a female New Zealand sea lion, and the pup was quite likely the first one to be born on the mainland in over 150 years.</p> <br>
@@ -185,7 +188,7 @@
           <img src="img/viewing-sealions.jpg" alt="Image showing someone safely viewing a sea lion">
         </div>
 
-        <div class="right-text-area">
+        <div class="right-text-area top-padding">
           <h5>10 metres is the safe minimum distance to view sea lions.</h5>
           <p>Walking along beaches in the Otago and Southland area you may come across individual or groups of sea lions. This is a thrilling experience but it is very important to <span class="bold">keep a distance of at least 10 metres</span> between you and the nearest sea lion for both your own and the sea lion’s safety.</p><br>
 
@@ -208,8 +211,15 @@
 
     <!-- social media area STARTS -->
     <div class="social-media-area">
-      <i class="fa fa-facebook social-icon" aria-hidden="true" href="https://www.facebook.com/nzsealiontrust/"></i>
-      <i class="fa fa-instagram social-icon" aria-hidden="true" href="https://www.instagram.com/nzsealiontrust/"></i>
+
+      <a href="https://www.facebook.com/nzsealiontrust/">
+        <i class="fa fa-facebook social-icon" aria-hidden="true"></i>
+      </a>
+
+      <a href="https://www.instagram.com/nzsealiontrust/">
+        <i class="fa fa-instagram social-icon" aria-hidden="true"></i>
+      </a>
+
     </div>
     <!-- social media area ENDS -->
 
@@ -238,6 +248,7 @@
   </footer>
   <!-- footer ENDS -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="js/script.js"> </script>
 </body>
 

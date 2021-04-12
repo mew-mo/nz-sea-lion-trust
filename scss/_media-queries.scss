@@ -49,9 +49,14 @@
     display: none;
   }
 
-  .mobile-menu {
-    display: block;
+  .nav-area, .nav-links {
+
+    .mobile-menu {
+      display: block;
+    }
+
   }
+
 
   // MAIN CONTAINER------------------------------
 
@@ -79,6 +84,7 @@
   .main-intro-area {
     width: 100%;
     text-align: center;
+    padding: 0;
 
     .main-header {
       padding: 0 10px 0 10px;
@@ -89,12 +95,89 @@
     }
   }
 
+  // ------------- REUSABLE SECTION LAYOUT CODE ------------
+
+  // section with img on left and text on right
+
+
+  .left-img-section-layout {
+
+    .left-img-area {
+
+      img {
+        width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
+    }
+    // left img area ENDS
+
+    .right-text-area {
+      width: 80vw;
+      text-align: center;
+      margin: 0 0 0 7vw;
+
+      p {
+        text-align: left;
+      }
+
+      .primary-btn {
+        margin-bottom: 2vh;
+      }
+
+    }
+    // right text area ENDS
+  }
+  // left-img-section-layout area ENDS
+
+  // section with img on right and text on left
+
+  .section-content {
+    flex-direction: column;
+    padding-bottom: 5vh;
+  }
+
+  .right-img-section-layout {
+
+    .right-img-area {
+      width: 100%;
+
+      img {
+        width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
+    }
+    // img area ENDS
+
+    .left-text-area {
+      width: 80vw;
+      margin: 0 0 0 10vw;
+      padding: 0 0 7vh 0;
+
+      h5 {
+        text-align: center;
+        padding: 5vh 0 0 0;
+      }
+
+    }
+    // text area ENDS
+
+  }
+
+  // PAGE BANNERS--------------------------------
+  .page-banner {
+
+    .banner-header {
+      line-height: 65px;
+    }
+
+  }
+
   // FOOTER -------------------------------------
 
   .footer {
     display: block;
 
-    .social-media-area {
+    .social-media-area a {
       padding: 0;
 
       .social-icon {

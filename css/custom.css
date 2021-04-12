@@ -51,6 +51,12 @@ p {
 .blue {
   color: #85A5D6; }
 
+.top-padding, .main-intro-area {
+  padding-top: 10vh; }
+
+.remove-bottom-margin {
+  margin-bottom: -10vh; }
+
 /*----------------- NAVIGATION -------------------------- */
 .nav-area,
 .nav-links {
@@ -61,8 +67,8 @@ p {
     display: none;
     position: absolute;
     top: 5vh;
-    left: 90vw;
-    color: #16425B;
+    left: 85vw;
+    color: #85A5D6;
     font-size: 30px; }
   .nav-area .logo,
   .nav-links .logo {
@@ -289,6 +295,7 @@ p {
   margin: 10vh 0 0 0; }
   .board-members-area .member-card {
     background-color: #85A5D6;
+    height: 33vh;
     margin: 5vh 5vw 7vh 5vw;
     padding: 0 10px 30px 10px;
     -webkit-border-radius: 73px;
@@ -311,6 +318,16 @@ p {
     color: #FCF9F7;
     padding: 15px 15px 0 15px; }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #66C8CA; }
+
+.slick-prev {
+  padding-left: 50px; }
+
+.slick-next {
+  padding-right: 50px; }
+
 .footer {
   display: flex;
   color: #373D3F;
@@ -318,27 +335,30 @@ p {
   width: 100vw;
   padding: 5vh 0 0 0; }
   .footer .social-media-area {
-    font-size: 40px;
     padding: 0 0 0 3vw; }
-    .footer .social-media-area .social-icon {
+  .footer .social-media-area a {
+    font-size: 40px;
+    text-decoration: none;
+    padding: 0 0 0 2vw; }
+    .footer .social-media-area a .social-icon {
       position: relative;
       top: 30px;
       color: #85A5D6;
-      padding: 0 0 0 30px;
+      padding: 0;
       cursor: pointer;
       transition: 0.5s;
       transition-timing-function: ease; }
-    .footer .social-media-area .social-icon:hover {
+    .footer .social-media-area a .social-icon:hover {
       color: #66C8CA;
       transition: 0.5s;
       transition-timing-function: ease; }
   .footer .email-area {
     position: relative;
-    right: -68vw;
+    right: -67vw;
     top: 35px; }
   .footer .po-box-area {
     position: relative;
-    right: -80vw;
+    right: -79vw;
     top: -40px; }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
@@ -371,7 +391,7 @@ p {
   .drop-btn {
     display: none; }
 
-  .mobile-menu {
+  .nav-area .mobile-menu, .nav-links .mobile-menu {
     display: block; }
 
   .main-container {
@@ -388,17 +408,50 @@ p {
 
   .main-intro-area {
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    padding: 0; }
     .main-intro-area .main-header {
       padding: 0 10px 0 10px; }
     .main-intro-area .main-subheader {
       padding: 10px 20px 0 20px; }
 
+  .left-img-section-layout .left-img-area img {
+    width: 80vw;
+    margin: 0 10vw 0 10vw; }
+  .left-img-section-layout .right-text-area {
+    width: 80vw;
+    text-align: center;
+    margin: 0 0 0 7vw; }
+    .left-img-section-layout .right-text-area p {
+      text-align: left; }
+    .left-img-section-layout .right-text-area .primary-btn {
+      margin-bottom: 2vh; }
+
+  .section-content {
+    flex-direction: column;
+    padding-bottom: 5vh; }
+
+  .right-img-section-layout .right-img-area {
+    width: 100%; }
+    .right-img-section-layout .right-img-area img {
+      width: 80vw;
+      margin: 0 10vw 0 10vw; }
+  .right-img-section-layout .left-text-area {
+    width: 80vw;
+    margin: 0 0 0 10vw;
+    padding: 0 0 7vh 0; }
+    .right-img-section-layout .left-text-area h5 {
+      text-align: center;
+      padding: 5vh 0 0 0; }
+
+  .page-banner .banner-header {
+    line-height: 65px; }
+
   .footer {
     display: block; }
-    .footer .social-media-area {
+    .footer .social-media-area a {
       padding: 0; }
-      .footer .social-media-area .social-icon {
+      .footer .social-media-area a .social-icon {
         top: 36vh;
         left: 10vw;
         padding: 0 20px 0 0; }
