@@ -47,9 +47,8 @@
 }
 
 
-// extra small devices (phones, 600px and down)--------------------
+// extra small devices (phones, 600px and down)----------------------------
 @media only screen and (max-width: 600px) {
-
 
   // NAVIGATION ----------------------------------
 
@@ -73,8 +72,13 @@
     .mobile-menu {
       display: block;
     }
-  }
 
+    .logo {
+      width: 110px;
+      margin: 3vh 0 0 -20vw;
+      padding: 0;
+    }
+  }
 
   // MAIN CONTAINER------------------------------
 
@@ -95,7 +99,6 @@
       padding: 0 0 0 100px;
     }
   }
-  // hero img area ENDS
 
   // MAIN INTRO AREA - index page -----------------------------
 
@@ -116,7 +119,6 @@
   // REUSABLE SECTION LAYOUT CODE ------------------------------
 
   // section with img on left and text on right
-
 
   .left-img-section-layout {
 
@@ -186,6 +188,14 @@
     }
   }
 
+  // ABOUT US PAGE ------------------------------
+
+  .img-subtitle {
+    width: 100vw;
+    text-align: center;
+    margin: 1vh 0 3vh 0;
+  }
+
   // DONATE PAGE --------------------------------
 
   .donate-card-area {
@@ -211,7 +221,7 @@
 
       .social-icon {
         top: 36vh;
-        left: 10vw;
+        left: 3vw;
         padding: 0 20px 0 0;
       }
     }
@@ -219,19 +229,23 @@
 
     .email-area {
       text-align: left;
-      left: 10vw;
+      left: 6vw;
       top: 38vh;
     }
 
     .po-box-area {
       text-align: left;
       left: 60vw;
-      top: 30.5vh;
+      top: 29vh;
     }
   }
 
   .media-query-margin-fix {
     margin: -30vh 0 0 0;
+  }
+
+  .index-margin-fix {
+    margin: 18vh 0 0 0;
   }
 
 }
