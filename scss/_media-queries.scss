@@ -1,10 +1,12 @@
 // for smaller laptops and desktops between the widths of 1025px and 1280px---
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 
+//  navigation------
   .nav-links {
-    margin-left: 20vw;
+    margin: 0 0 0 20vw;
   }
 
+// index page -------
   .hero-img-area {
 
     .sealion-hero-img {
@@ -12,6 +14,25 @@
     }
   }
 
+// donate page ------
+
+  .donate-card {
+
+    width: 50vw;
+
+    img {
+      width: 105%;
+      margin: 0 0 0 -5%;
+    }
+  }
+
+  .action-btn {
+    position: absolute;
+    top: 0%;
+    margin: 64% 0 0 15%;
+  }
+
+// footer -----------
   .email-area {
     position: relative;
     left: 55vw;
@@ -119,9 +140,8 @@
       }
 
       .primary-btn {
-        margin-bottom: 2vh;
+        margin: 3vh 0 2vh 0;
       }
-
     }
     // right text area ENDS
   }
@@ -130,7 +150,7 @@
 
   .section-content {
     flex-direction: column;
-    padding-bottom: 5vh;
+    padding: 0 0 5vh 0;
   }
 
   .right-img-section-layout {
@@ -172,7 +192,7 @@
     flex-direction: column;
 
     .card-info {
-      padding-bottom: 3vh;
+      padding: 3vh 0 3vh 0;
     }
 
     .action-btn {

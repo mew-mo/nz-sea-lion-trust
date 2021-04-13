@@ -140,13 +140,13 @@ p {
 
   .logo {
     width: 140px;
-    margin-top: 3vh;
-    padding-left: 5vw;
+    margin: 3vh 0 0 0;
+    padding: 0 0 0 5vw;
   }
 
   .dropdown,
   .nav-item {
-    margin-top: 5vh;
+    margin: 5vh 0 0 0;
   }
 
   .nav-item,
@@ -183,7 +183,7 @@ p {
   .dropdown-content {
     display: none;
     position: absolute;
-    margin-left: 15px;
+    margin: 0 0 0 15px;
     background-color: $dark-off-white;
 
     .nav-subitem {
@@ -218,7 +218,7 @@ p {
 // nav area ENDS
 
 .nav-links {
-  margin-left: 43vw;
+  margin: 0 0 0 43vw;
 }
 
 
@@ -243,7 +243,7 @@ p {
 // section with img on left and text on right
 
 .intro-area {
-  padding-top: 10vh;
+  padding: 10vh 0 0 0;
 }
 
 .left-img-section-layout {
@@ -288,7 +288,7 @@ p {
 
 .section-content {
   display: flex;
-  padding-bottom: 10vh;
+  padding: 0 0 10vh 0;
 }
 
 .right-img-section-layout {
@@ -333,7 +333,7 @@ p {
 }
 
 .more-arrow {
-  padding-left: 10px;
+  padding: 0 0 0 10px;
 }
 
 .secondary-btn {
@@ -388,7 +388,7 @@ p {
   border-bottom-right-radius: 50%;
 
   .banner-header {
-    padding-top: 6vh;
+    padding: 6vh 0 0 0;
   }
 
   .banner-subheader {
@@ -444,11 +444,11 @@ p {
 }
 
 .slick-prev {
-    padding-left: 50px;
+    padding: 0 0 0 50px;
   }
 
   .slick-next {
-    padding-right: 50px;
+    padding: 0 50px 0 0;
   }
 
 // ---------------- DONATE CARDS - donate page --------------------------
@@ -463,17 +463,17 @@ p {
   @include transition;
 
   .card-header {
-    padding-top: 1vh;
+    padding: 1vh 0 0 0;
     @extend .card-subheader;
   }
 
   .card-info {
-    padding-bottom: 5vh;
+    padding: 0 0 5vh 0;
   }
 
   img {
     width: 105%;
-    margin-left: -4%;
+    margin: 0 0 0 -4%;
     border: 5px solid $off-white;
     @include border-radius;
   }
@@ -501,7 +501,7 @@ p {
   height: 80px;
   width: 80px;
   background: $off-white;
-  margin-left: 15%;
+  margin: 0 0 0 15%;
   border: 3px solid $off-white;
   box-shadow: inset 0 0 0 3px $aqua;
   @include border-radius;
