@@ -1,12 +1,25 @@
 
 $('document').ready(function(){
 
+  var open = false;
+
   // mobile menu function (incomplete)
   $('.mobile-menu').click(function(){
-    $('.nav-item, .dropdown, .drop-btn ').css({
-      'display':'block',
-      'background':'#FCF9F7',
-    });
+
+    if (!open) {
+      $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').css({
+        'display':'block',
+        // 'background':'#FCF9F7',
+      });
+      $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').removeClass('on-close');
+      open = true;
+    } else if (open) {
+      $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').addClass('on-close');
+      $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').css({
+        'display':'none',
+      });
+      open = false;
+    }
   });
 
   // slick card slider - about us page

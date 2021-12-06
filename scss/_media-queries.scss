@@ -1,16 +1,18 @@
 // for smaller laptops and desktops between the widths of 1025px and 1280px---
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) and (max-width: 1580px) {
 
 //  navigation------
   .nav-links {
-    margin: 0 0 0 20vw;
+    margin: 0 0 0 23vw;
   }
 
 // index page -------
   .hero-img-area {
 
     .sealion-hero-img {
-      padding: 5vh 0 0 7vw;
+      padding: 10vh 0 0 7vw;
+      width: 80%;
+      height: 80%;
     }
   }
 
@@ -46,9 +48,67 @@
   }
 }
 
+// even smaller laptops!
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
 
-// extra small devices (phones, 600px and down)----------------------------
-@media only screen and (max-width: 600px) {
+  * {
+    font-size: 13px;
+  }
+
+//  navigation------
+  .nav-links {
+    margin: 0 0 0 6vw;
+  }
+
+// index page -------
+  .hero-img-area {
+
+    .sealion-hero-img {
+      padding: 15vh 10px 0 1vw;
+      width: 50vw;
+      height: 50vh;
+    }
+  }
+
+// donate page ------
+
+  .donate-card {
+
+    width: 50vw;
+
+    img {
+      width: 105%;
+      margin: 0 0 0 -5%;
+    }
+  }
+
+  .action-btn {
+    position: absolute;
+    top: 0%;
+    margin: 64% 0 0 15%;
+  }
+
+// footer -----------
+  .email-area {
+    position: relative;
+    left: 45vw;
+    top: 35px;
+  }
+
+  .po-box-area {
+    position: relative;
+    left: 62vw;
+    top: -23px;
+  }
+}
+
+//  small devices (tablets, 900px and down)----------------------------
+@media only screen and (max-width: 900px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
   // NAVIGATION ----------------------------------
 
@@ -74,9 +134,57 @@
     }
 
     .logo {
+      position: absolute;
+      left: 10px;
+      top: 0;
       width: 110px;
-      margin: 3vh 0 0 -20vw;
       padding: 0;
+    }
+
+    .dropdown-content {
+      position: inherit;
+      margin-left: 10px;
+      padding: 10px;
+    }
+
+    .nav-item,
+    .nav-subitem {
+      padding: 0;
+    }
+  }
+
+  .nav-links > *:not(.mobile-menu) {
+    display: block;
+    height: 100px;
+    // padding: 300px 0;
+    width: 50vw;
+    margin-left: 30vw;
+    animation: open-menu 1s;
+  }
+
+  .nav-links > *:not(.mobile-menu) {
+
+    .on-close {
+      animation: close-menu 1s;
+    }
+  }
+
+  // animations
+    @keyframes open-menu {
+      from {
+        transform: scaleY(0);
+      }
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+  @keyframes close-menu {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
     }
   }
 
@@ -93,6 +201,7 @@
     width: 80%;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 
     .sealion-hero-img {
       width: 100%;
@@ -237,6 +346,256 @@
       text-align: left;
       left: 60vw;
       top: 29vh;
+    }
+  }
+
+  .media-query-margin-fix {
+    margin: -30vh 0 0 0;
+  }
+
+  .index-margin-fix {
+    margin: 18vh 0 0 0;
+  }
+
+}
+
+// extra small devices (mobile phones, 600px and down)----------------------------
+@media only screen and (max-width: 600px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  // NAVIGATION ----------------------------------
+
+  .nav-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item,
+  .nav-subitem,
+  .dropdown,
+  .drop-btn,
+  .donate-btn {
+    display: none;
+  }
+
+  .nav-area, .nav-links {
+
+    .mobile-menu {
+      display: block;
+    }
+
+    .logo {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 110px;
+      padding: 0;
+    }
+
+    .dropdown-content {
+      margin-left: 10px;
+      padding: 10px;
+    }
+
+    .nav-item,
+    .nav-subitem {
+      padding: 0;
+    }
+  }
+
+  .nav-links > *:not(.mobile-menu) {
+    display: block;
+    height: 100px;
+    width: auto;
+    margin-left: 0;
+    animation: open-menu 1s;
+  }
+
+  .nav-links > *:not(.mobile-menu) {
+
+    .on-close {
+      animation: close-menu 1s;
+    }
+  }
+
+  // animations
+    @keyframes open-menu {
+      from {
+        transform: scaleY(0);
+      }
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+  @keyframes close-menu {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
+    }
+  }
+
+  // MAIN CONTAINER------------------------------
+
+  .main-container {
+    display: block;
+  }
+
+  // HERO IMG AREA - index page-------------------------------
+
+  .hero-img-area {
+    margin-top: 0;
+  }
+
+  // MAIN INTRO AREA - index page -----------------------------
+
+  .main-intro-area {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+
+    .main-header {
+      padding: 0 10px 0 10px;
+    }
+
+    .main-subheader {
+      padding: 10px 20px 0 20px;
+    }
+  }
+
+  // REUSABLE SECTION LAYOUT CODE ------------------------------
+
+  // section with img on left and text on right
+
+  .left-img-section-layout {
+
+    .left-img-area {
+
+      img {
+        width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
+    }
+    // left img area ENDS
+
+    .right-text-area {
+      width: 80vw;
+      text-align: center;
+      margin: 0 0 0 7vw;
+
+
+      p {
+        text-align: left;
+      }
+
+      .primary-btn {
+        margin: 3vh 0 2vh 0;
+      }
+    }
+    // right text area ENDS
+  }
+
+  // section with img on right and text on left
+
+  .section-content {
+    flex-direction: column;
+    padding: 0 0 5vh 0;
+  }
+
+  .right-img-section-layout {
+
+    .right-img-area {
+      width: 100%;
+
+      img {
+        width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
+    }
+    // img area ENDS
+
+    .left-text-area {
+      width: 80vw;
+      margin: 0 0 0 10vw;
+      padding: 0 0 7vh 0;
+
+      h5 {
+        text-align: center;
+        padding: 5vh 0 0 0;
+      }
+    }
+    // text area ENDS
+  }
+
+  // PAGE BANNERS--------------------------------
+  .page-banner {
+
+    .banner-header {
+      line-height: 65px;
+    }
+  }
+
+  // ABOUT US PAGE ------------------------------
+
+  .img-subtitle {
+    width: 100vw;
+    text-align: center;
+    margin: 1vh 0 3vh 0;
+  }
+
+  // DONATE PAGE --------------------------------
+
+  .donate-card-area {
+    flex-direction: column;
+
+    .card-info {
+      padding: 3vh 0 3vh 0;
+    }
+
+    .action-btn {
+      position: relative;
+      left: 70%;
+    }
+  }
+
+  // FOOTER -------------------------------------
+
+  .footer  {
+    display: block;
+
+    .social-media-area a {
+      padding: 0;
+
+      .social-icon {
+        top: 36vh;
+        left: 3vw;
+        padding: 0 20px 0 0;
+      }
+    }
+    // social media area ENDS
+
+    p {
+      font-size: 0.85rem;
+    }
+
+    .email-area {
+      text-align: left;
+      left: 6vw;
+      top: 37.5vh;
+    }
+
+    .po-box-area {
+      text-align: left;
+      left: 60vw;
+      top: 30vh;
     }
   }
 
