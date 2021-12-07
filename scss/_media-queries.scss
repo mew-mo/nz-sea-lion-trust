@@ -1,3 +1,10 @@
+// bigboy computers
+@media screen and (min-width: 1581px) and (max-width: 1813px) {
+  .nav-links {
+    margin: 0 0 0 35vw;
+  }
+}
+
 // for smaller laptops and desktops between the widths of 1025px and 1280px---
 @media screen and (min-width: 1025px) and (max-width: 1580px) {
 
@@ -11,8 +18,8 @@
 
     .sealion-hero-img {
       padding: 10vh 0 0 7vw;
-      width: 80%;
-      height: 80%;
+      height: 90%;
+      width: auto;
     }
   }
 
@@ -117,20 +124,32 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100px;
   }
 
   .nav-item,
   .nav-subitem,
   .dropdown,
   .drop-btn,
-  .donate-btn {
+  .donate-btn,
+  .donate-link {
     display: none;
   }
 
   .nav-area, .nav-links {
+    background: $off-white;
+    z-index: 99;
+    transition: .5s;
+    transition-timing-function: ease;
 
     .mobile-menu {
       display: block;
+      z-index: 999;
+      position: absolute;
+      top: 30px;
+      left: 75%;
     }
 
     .logo {
@@ -153,11 +172,18 @@
     }
   }
 
-  .nav-links > *:not(.mobile-menu) {
+  .nav-links:not(.mobile-menu) {
+    position: absolute;
+    z-index: 99;
+    top: 0px;
+    width: 70vw;
+  }
+
+  .nav-links > *:not(.mobile-menu):not(.donate-link) {
+    // donate link not included too, as to keep it hidden
     display: block;
     height: 100px;
-    // padding: 300px 0;
-    width: 50vw;
+    width: 100vw;
     margin-left: 30vw;
     animation: open-menu 1s;
   }
@@ -173,18 +199,22 @@
     @keyframes open-menu {
       from {
         transform: scaleY(0);
+        opacity: 0;
       }
       to {
         transform: scaleY(1);
+        opacity: 1;
       }
     }
 
   @keyframes close-menu {
     from {
       transform: scaleY(1);
+      opacity: 1;
     }
     to {
       transform: scaleY(0);
+      opacity: 0;
     }
   }
 
@@ -374,6 +404,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    background: $off-white;
   }
 
   .nav-item,
@@ -570,6 +602,7 @@
 
   .footer  {
     display: block;
+    padding-top: 12vh;
 
     .social-media-area a {
       padding: 0;
@@ -605,6 +638,29 @@
 
   .index-margin-fix {
     margin: 18vh 0 0 0;
+  }
+
+}
+
+// worlds tiniest phone ----------------------------
+@media only screen and (max-width: 321px) {
+
+  * {
+    font-size: 12px;
+  }
+
+  .nav-area {
+    .logo {
+      z-index: 999;
+    }
+
+    .mobile-menu {
+      left: 70%;
+    }
+  }
+
+  .nav-links:not(.mobile-menu) {
+    width: 60vw;
   }
 
 }

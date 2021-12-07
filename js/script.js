@@ -5,11 +5,13 @@ $('document').ready(function(){
 
   // mobile menu function (incomplete)
   $('.mobile-menu').click(function(){
+    checkIfOpen();
+  }); // mobile menu click
 
+  function checkIfOpen() {
     if (!open) {
       $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').css({
         'display':'block',
-        // 'background':'#FCF9F7',
       });
       $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').removeClass('on-close');
       open = true;
@@ -19,6 +21,14 @@ $('document').ready(function(){
         'display':'none',
       });
       open = false;
+    }
+  }
+
+  $(window).load(function() {
+    if ($('.mobile-menu').is(':visible')) {
+      $('.nav-item, .dropdown, .drop-btn, .dropdown-content ').css({
+        'display':'none',
+      });
     }
   });
 
